@@ -1,6 +1,13 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+ - This project is using CSS3 without extra libraries.
+
+ - The data changes is saved in the localStorage named "data"
+
+ - Time used to perform the test: 7 hours
+
 
 ## Available Scripts
 
