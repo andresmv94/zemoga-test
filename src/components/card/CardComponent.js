@@ -19,12 +19,12 @@ const CardComponent = (props) => {
   const actions = (
     <>
       <div className="card-category">
-        {wasVoted ? "Thank you for your vote!" : data.category}
+        {wasVoted === myKey ? "Thank you for your vote!" : data.category}
       </div>
       <div
         className={`card-actions ${cardType === "list" && "card-list-actions"}`}
       >
-        {!wasVoted ? (
+        {!(wasVoted === myKey) ? (
           <>
             <img
               src="assets/img/thumbs-color-up.svg"

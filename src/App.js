@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState({});
   const [currentKey, setCurrentKey] = useState(-1);
   const [vote, setVote] = useState("none");
-  const [wasVoted, setWasVoted] = useState(false);
+  const [wasVoted, setWasVoted] = useState(-1);
   const [width, setWidth] = useState(window?.innerWidth);
   const [cardType, setCardType] = useState("grid");
 
@@ -31,13 +31,13 @@ function App() {
     const currentData = { ...data };
     currentData.data[currentKey].votes[vote] += 1;
     setData(currentData);
-    setWasVoted(true);
+    setWasVoted(currentKey);
   };
 
   const voteAgain = () => {
     setCurrentKey(-1);
     setVote("none");
-    setWasVoted(false);
+    setWasVoted(-1);
   };
 
   useEffect(() => {
